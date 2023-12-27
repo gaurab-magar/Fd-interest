@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container-1">
+        <div class="card border-0 shadow-lg">
+            <div class="container p-3 d-flex flex-column gap-2">
+                <div class="group-items text-center">
+                    <h3 class="fw-bold py-3">FD Interest</h3>
+                </div>
+                <div class="group-items">
+                    <label for="amount" class="fw-bold">Amount</label>
+                    <input type="number" id="amount" class="form-control" placeholder="Enter your amount">
+                </div>
+                <div class="group-items">
+                    <label for="interest" class="fw-bold">Interest</label>
+                    <input type="number" id="interest" class="form-control" placeholder="Enter your interest">
+                </div>
+                <div class="group-items">
+                    <label for="tenure" class="fw-bold">Tenure(In years):</label>
+                    <input type="number" id="tenure" class="form-control" placeholder="Enter your Tenure">
+                </div>
+                <div class="group-items d-grid mt-3">
+                    <button id="submit" class="btn btn-secondary fw-bold">Calculate</button>
+                </div>
+                <div class="group-items text-center">
+                    <p id="result" class="fst-italic fw-bold">Result:1000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
