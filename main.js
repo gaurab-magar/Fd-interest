@@ -1,14 +1,36 @@
-function fdCalculate (){
-    let amount = parseFloat(document.querySelector('#amount').value);
-    let interest = parseFloat(document.querySelector('#interest').value);
-    let tenure = parseFloat(document.querySelector('#tenure').value);
-    let btn = document.querySelector('#submit');
-    let result = document.querySelector('#result');
+const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*()_-+={}[]|\':;?/.,`<>";
 
-    let maturityAmount = amount+(amount*interest*tenure)/100;
-    result.innerHTML = `maturity Amount: ${maturityAmount.toFixed(2)}`;
-};
+let inputValue = document.querySelector('#pass');
+let lengthEl = document.querySelector('#length');
+let lowerEl = document.querySelector('#lower');
+let upperEl = document.querySelector('#upper');
+let numberEl = document.querySelector("#number");
+let symbol = document.querySelector('#symbol');
+let generateBtn = document.querySelector('#btn');
 
 
+generateBtn.addEventListener('click',()=>{
+    let length = parseInt(lengthEl.value);
+    let characters = "";
+    let password = "";
 
-addEventListener('click', fdCalculate);
+    if(lowerEl.checked){
+        characters += lowercaseLetters;
+    }
+    if(upperEl.checked){
+        characters+= uppercaseLetters;
+    }
+    if(numberEl.checked){
+        characters+= numbers;
+    }
+    if(symbol.checked){
+        characters+= symbols;
+    }
+    for (let i=0; i < length; i++){
+        password += characters.charAt(Math.floor(Math.random()*characters.length));
+    }
+    inputValue.value = password;
+})

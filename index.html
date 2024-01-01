@@ -8,35 +8,48 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container-1">
-        <div class="card border-0 shadow-lg">
-            <div class="container p-3 d-flex flex-column gap-2">
-                <div class="group-items text-center">
-                    <h3 class="fw-bold py-3">FD Interest</h3>
+   <section class="container">
+    <div class="row mt-5">
+        <div class="col-4 offset-4">
+            <div class="card bg-secondary">
+                <div class="card-title">
+                    <h4 class="text-center pt-3 text-uppercase">password generator</h4>
                 </div>
-                <div class="group-items">
-                    <label for="amount" class="fw-bold">Amount</label>
-                    <input type="number" id="amount" class="form-control" placeholder="Enter your amount">
-                </div>
-                <div class="group-items">
-                    <label for="interest" class="fw-bold">Interest</label>
-                    <input type="number" id="interest" class="form-control" placeholder="Enter your interest">
-                </div>
-                <div class="group-items">
-                    <label for="tenure" class="fw-bold">Tenure(In years):</label>
-                    <input type="number" id="tenure" class="form-control" placeholder="Enter your Tenure">
-                </div>
-                <div class="group-items d-grid mt-3">
-                    <button id="submit" class="btn btn-secondary fw-bold">Calculate</button>
-                </div>
-                <div class="group-items text-center">
-                    <p id="result" class="fst-italic fw-bold">Result:1000</p>
+                <div class="card-body">
+                    <form action="#" class="d-flex flex-column gap-3">
+                        <div class="generate-input">
+                            <label for="pass">your password</label>
+                            <div class="input-group">
+                                <input id="pass" type="text" class="form-control">
+                                <button id="btn" class="btn btn-success border-0">Generate</button>
+                            </div>
+                        </div>
+                        <div class="password-length">
+                            <label for="length">password length</label>
+                            <input id="length" type="number" min="7" max="16" class="form-control">
+                        </div>
+                        <div class="lower d-flex flex-column">
+                            <label for="lower">Include LowerCase</label>
+                            <input id="lower" type="checkbox" class="form-check-input">
+                        </div>
+                        <div class="upper d-flex flex-column">
+                            <label for="upper">Include upperCase</label>
+                            <input id="upper" type="checkbox" class="form-check-input">
+                        </div>
+                        <div class="number d-flex flex-column">
+                            <label for="number">Include Numbers</label>
+                            <input id="number" type="checkbox" class="form-check-input">
+                        </div>
+                        <div class="symbols d-flex flex-column">
+                            <label for="symbol">Include Symbols</label>
+                            <input id="symbol" type="checkbox" class="form-check-input">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-
+   </section>
     <script src="./main.js"></script>
 </body>
 </html>
